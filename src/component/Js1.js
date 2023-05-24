@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import remarkGfm from 'remark-gfm';
-import PropTypes from 'prop-types';
 
 const Js1 = ({ mdFile, prev, next, prevTitle, nextTitle, collapsed }) => {
 
