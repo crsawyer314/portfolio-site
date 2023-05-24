@@ -4,16 +4,16 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import remarkGfm from 'remark-gfm';
 import PropTypes from 'prop-types';
 
-const Js1 = ({ props, collapsed }) => {
+const Js1 = ({ mdFile, prev, next, prevTitle, nextTitle, collapsed }) => {
 
   const [markdown, setMarkdown] = useState('');
 
   useEffect(() => {
     // Get the contents from the Markdown file and update the state with the fetched data
-    fetch(props.mdFile)
+    fetch(mdFile)
       .then((res) => res.text())
       .then((text) => setMarkdown(text));
-  }, [props.mdFile]);
+  }, [mdFile]);
 
   return (
     <div>
@@ -41,10 +41,10 @@ const Js1 = ({ props, collapsed }) => {
           {/* <!-- Content --> */}
           <section>
             <button>
-              <a href={props.prev}>Prev - {props.prevTitle}</a>
+              <a href={`#${prev}`}>Prev - {prevTitle}</a>
             </button>
             <button>
-              <a href={props.next}>Next - {props.nextTitle}</a>
+              <a href={`#${next}`}>Next - {nextTitle}</a>
             </button>
             <ReactMarkdown
               children={markdown}
@@ -70,11 +70,11 @@ const Js1 = ({ props, collapsed }) => {
             />
             <br />
             <button>
-              <a href={props.prev}>Prev - {props.prevTitle}</a>
+              <a href={`#${prev}`}>Prev - {prevTitle}</a>
             </button>
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
               <button>
-                <a href={props.next}>Next - {props.nextTitle}</a>
+              <a href={`#${next}`}>Next - {nextTitle}</a>
               </button>
             </div>
           </section>
@@ -83,14 +83,6 @@ const Js1 = ({ props, collapsed }) => {
     </div>
   );
 }
-
-Js1.propTypes = {
-  mdFile: PropTypes.string.isRequired,
-  prev: PropTypes.string.isRequired,
-  next: PropTypes.string.isRequired,
-  prevTitle: PropTypes.string.isRequired,
-  nextTitle: PropTypes.string.isRequired,
-};
 
 Js1.defaultProps = {
   mdFile: '',

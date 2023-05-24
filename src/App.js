@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 
 import Sidebar from "./component/Sidebar";
@@ -42,10 +42,18 @@ function App() {
       </button>
       <Router>
         <Routes>
-          <Route path="/index.html" element={<Home collapsed={sidebarCollapsed} /> } />
-          <Route path="/" element={<Home collapsed={sidebarCollapsed} /> } />
-          <Route path="/home" element={<Home collapsed={sidebarCollapsed} /> } />
-          <Route path="/bio" element={<Bio collapsed={sidebarCollapsed} /> } />
+          <Route 
+            path="/index.html" 
+            element={<Home collapsed={sidebarCollapsed} /> } />
+          <Route 
+            path="/" 
+            element={<Home collapsed={sidebarCollapsed} /> } />
+          <Route 
+            path="/home" 
+            element={<Home collapsed={sidebarCollapsed} /> } />
+          <Route 
+            path="/bio" 
+            element={<Bio collapsed={sidebarCollapsed} /> } />
           <Route
             path="/js_1.1"
             element={
@@ -187,12 +195,24 @@ function App() {
               />
             }
           />
-          <Route path="/resumes" element={<Resumes collapsed={sidebarCollapsed} /> } />
-          <Route path="/hobbies" element={<Hobbies collapsed={sidebarCollapsed} /> } />
-          <Route path="/dinner-spinner" element={<DinnerSpinner collapsed={sidebarCollapsed} /> } />
-          <Route path="/js_about" element={<JsAbout collapsed={sidebarCollapsed} /> } />
-          <Route path="/js_syllabus" element={<JsSyllabus collapsed={sidebarCollapsed} /> } />
-          <Route path="*" element={<PageNotFound collapsed={sidebarCollapsed} /> } />
+          <Route 
+            path="/resumes" 
+            element={<Resumes collapsed={sidebarCollapsed} /> } />
+          <Route 
+            path="/hobbies" 
+            element={<Hobbies collapsed={sidebarCollapsed} /> } />
+          <Route 
+            path="/dinner-spinner" 
+            element={<DinnerSpinner collapsed={sidebarCollapsed} /> } />
+          <Route 
+            path="/js_about" 
+            element={<JsAbout collapsed={sidebarCollapsed} /> } />
+          <Route 
+            path="/js_syllabus" 
+            element={<JsSyllabus collapsed={sidebarCollapsed} /> } />
+          <Route 
+            path="*" 
+            element={<PageNotFound collapsed={sidebarCollapsed} /> } />
         </Routes>
       </Router>
     </div>

@@ -29,7 +29,7 @@ const JsAbout = ({ collapsed }) => {
           <section>
             <header className="main">
               <button>
-                <a href="/js_syllabus">Next - Syllabus</a>
+                <a href="/#/js_syllabus">Next - Syllabus</a>
               </button>
               <h1>JavaScript for Beginners - About</h1>
             </header>
@@ -66,7 +66,7 @@ const JsAbout = ({ collapsed }) => {
 
             <br />
             <button>
-              <a href="/js_syllabus">Next - Syllabus</a>
+              <a href="/#/js_syllabus">Next - Syllabus</a>
             </button>
           </section>
         </div>

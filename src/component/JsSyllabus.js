@@ -30,10 +30,10 @@ const JsSyllabus = ({ collapsed }) => {
           <section>
             <header className="main">
               <button>
-                <a href="/js_about">Prev - About</a>
+                <a href="/#/js_about">Prev - About</a>
               </button>
               <button>
-                <a href="/js_1.1">Next - Lesson 1.1</a>
+                <a href="/#/js_1.1">Next - Lesson 1.1</a>
               </button>
               <h1>JavaScript for Beginners - Syllabus</h1>
             </header>
@@ -102,10 +102,10 @@ const JsSyllabus = ({ collapsed }) => {
 
             <br />
             <button>
-              <a href="/js_about">Prev - About</a>
+              <a href="/#/js_about">Prev - About</a>
             </button>
             <button>
-              <a href="/js_1.1">Next - Lesson 1.1</a>
+              <a href="/#/js_1.1">Next - Lesson 1.1</a>
             </button>
           </section>
         </div>
