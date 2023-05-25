@@ -40,10 +40,10 @@ const Js1 = ({ mdFile, prev, next, prevTitle, nextTitle, collapsed }) => {
           {/* <!-- Content --> */}
           <section>
             <button>
-              <a href={`${prev}`}>Prev - {prevTitle}</a>
+              <a href={`#${prev}`}>Prev - {prevTitle}</a>
             </button>
             <button>
-              <a href={`${next}`}>Next - {nextTitle}</a>
+              <a href={`#${next}`}>Next - {nextTitle}</a>
             </button>
             <ReactMarkdown
               children={markdown}
@@ -69,11 +69,11 @@ const Js1 = ({ mdFile, prev, next, prevTitle, nextTitle, collapsed }) => {
             />
             <br />
             <button>
-              <a href={`${prev}`}>Prev - {prevTitle}</a>
+              <a href={`#${prev}`}>Prev - {prevTitle}</a>
             </button>
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
               <button>
-              <a href={`${next}`}>Next - {nextTitle}</a>
+              <a href={`#${next}`}>Next - {nextTitle}</a>
               </button>
             </div>
           </section>
