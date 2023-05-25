@@ -23,7 +23,7 @@ const Home = ({ collapsed }) => {
             <div className="content">
               <header>
                 <h1>Hi, I’m Catherine</h1>
-                <p>Technical educator, people manager, software developer, and creator</p>
+                <p>Technical educator, people manager, software engineer, and creator</p>
               </header>
               <p>My passion is increasing diversity through code.</p>
               <p>Whether it is grade-school students wanting to learn a new hobby or adults looking to break into tech, there is a space for everyone to learn to code. I host some personal projects on this website, including my <a href="/#/js_about">JavaScript for Adult Beginners</a>, a course targeted at adults looking to upskill and learn code.</p>
