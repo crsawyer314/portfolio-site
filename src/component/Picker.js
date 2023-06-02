@@ -96,9 +96,13 @@ class Picker extends Component {
       <div>
         <button onClick={this.handleClick}>Select random item</button>
         <h1>Your Dinner: {chosenDinner}</h1>
+        <p><strong>Cuisine:</strong> {dinnerInfo[1]}</p>
+        <p><strong>Recipe type:</strong> {dinnerInfo[0]}</p>
+        <p><strong>Main Protein:</strong> {dinnerInfo[2]}</p>
+        <p><strong>Other Key Ingredients:</strong></p>
         <ul>
-          {dinnerInfo.map((item, index) => (
-            <li key={index}>{item}</li>
+          {dinnerInfo.slice(3).map((ingredient, index) => (
+            <li key={index}>{ingredient}</li>
           ))}
         </ul>
       </div>

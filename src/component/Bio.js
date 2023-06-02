@@ -1,4 +1,6 @@
 import React from "react";
+import LanguageIcons from './LanguageIcons';
+
 
 const Bio = ({ collapsed }) => {
   return (
@@ -20,14 +22,20 @@ const Bio = ({ collapsed }) => {
             <header className="main">
               <h1>Catherine Sawyer</h1>
               <p>Technical educator, people manager, software developer, and creator</p>
+              
             </header>
-
-            <p>I am passionate about increasing diversity through code.</p>
-
-            <p>I started working in curriculum development and instruction in 2017 at <a href="https://acme.byu.edu/">Brigham Young University's Applied and Computational Math program</a>, working as a teaching assistant and also helping to write curriculum. In 2020, I moved to <a href="https://www.linkedin.com/school/the-coding-school/">The Coding School</a>, where I worked as their Chief Curriculum Developer, overseeing and contributing on teams working on a variety of curriculums, spanning general coding in Python and Java, to special-interest tracks like AI, Machine Learning, and Computational Biology. While there, I helped to secure a $3MM NSF grant to develop a year-long Machine Learning course. In 2021 and 2022, I served as the Program Director of Curriculum for <a href="https://www.linkedin.com/company/thrivedx-formerly-hu/">ThriveDX</a>'s Software Development bootcamp, overseeing a team of 8 curriculum developers in the creation and maintenance of coursework covering the fundamentals of web development, including HTML, CSS, and JavaScript, and moving further along into progressively more technical content including React and Redux, Python, and basic cloud computing and DevOps. Currently, I am working as a Senior Full Stack Engineer at <a href="https://www.aerial-data-labs.com/">Aerial Data Labs</a>, where I help to develop and maintain front- and back-end systems, primarily utilizing React, Django, and AWS.</p>
-
+            <br />
+              <section>
+                <p>I am passionate about increasing diversity through code.</p>
+                <p>I am a highly accomplished and versatile professional with expertise in technical education, software development, and curriculum design. Throughout my career, I have demonstrated a strong commitment to promoting diversity in the tech industry and have made significant contributions in various roles. I excel in curriculum development, instruction, and leadership positions, where I effectively oversee teams, secure grants, and drive impactful initiatives. My technical proficiency spans a wide range of technologies, including Python, Java, React, Django, and AWS. I am known for my exceptional leadership skills, instructional expertise, and dedication to fostering inclusive learning environments. With a deep passion for diversity, education, and technological innovation, I strive to make a lasting impact in the tech industry.</p>
+              
+                <p>Languages:</p>
+                <LanguageIcons />
+                <br/>
+                <p>You can download a copy of my resume <a href="../assets/Catherine_Resume.pdf" download="Catherine_Resume.pdf">here</a>.</p>
+              </section>
             <hr className="major" />
-
+            
             <h2>Brigham Young University</h2>
             <p>While working at <a href="https://acme.byu.edu/">Brigham Young University's Applied and Computational Math program</a>, I worked as a teaching assistant and curriculum developer. I focused on Python and data science fundamentals, including writing labs on <a href="https://acme.byu.edu/00000179-af53-d74f-a3ff-bfdb22530000/webscraping2020-pdf">web scraping</a> and <a href="https://acme.byu.edu/00000179-af53-d74f-a3ff-bfdb22520001/webcrawling2020-pdf">web crawling</a>. My favorite lab covered <a href="https://acme.byu.edu/00000179-af25-d5e1-a97b-bf6512fd0000/markov2020-pdf">Markov Models</a>, culminating in creating a text generator utilizing text from a variety of sources, including Yoda quotes and Taylor Swift's 1989 album.</p>
             <p>In addition worked as a research assistant in two different groups. One was focused on developing algorithms for root finding of large polynomials. While there, I earned a $1500 BYU ORCA grant and presented our findings at several different mathematical research conferences. The other was focused on utilizing big data techniques to find the "Optimal Pizza" in Provo, Utah. I presented our findings at a math research conference, and was also featured on the local news channel.</p>

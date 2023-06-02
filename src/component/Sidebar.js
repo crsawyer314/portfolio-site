@@ -99,6 +99,11 @@ const Sidebar = ({ collapsed, toggleSidebar }) => {
               </Typography>
             </li>
             <li>
+              <Typography>
+                <a href="/#/bio">About</a>
+              </Typography>
+            </li>
+            <li>
               <Accordion>
                 <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
                   <Typography>JavaScript for Beginners</Typography>
