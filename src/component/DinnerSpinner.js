@@ -23,7 +23,7 @@ const DinnerSpinner = ({ collapsed }) => {
               <h1>Dinner Spinner</h1>
             </header>
 
-            <p>The following is a fun little project I made to help choose what's for dinner. It selects from a large list of tagged dinner ideas; feel free to select which attributes you're interested in, or selecting none will choose from all available options.</p>
+            <p>The following is a fun little project I made to help choose what's for dinner. Hope it helps you too!</p>
 
             <hr className="major" />
 

@@ -1,130 +1,62 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import dinnersData from '../assets/dinners.json';
 
-class Picker extends Component {
-  constructor(props) {
-    super(props);
+const Picker = (props) => {
+  const [dinners, setDinners] = useState(dinnersData);
+  const [chosenDinner, setChosenDinner] = useState('');
 
-    this.state = {
-      dinners: {
-        'vindaloo curry': ['rice', 'indian', 'curry'],
-        'japanese curry': ['rice', 'japanese', 'asian', 'curry'],
-        'tikka masala': ['rice', 'indian', 'curry', 'chicken', 'chickpeas'],
-        'kichdi': ['rice', 'indian', 'lentils'],
-        'orange chicken': ['rice', 'asian', 'chicken'],
-        'bourbon chicken': ['rice', 'asian', 'chicken'],
-        'beef & broccoli': ['rice', 'chinese', 'beef', 'broccoli'],
-        'chicken & rice': ['rice', 'american', 'chicken'],
-        'hawaiian haystacks': ['rice', 'american', 'chicken', 'vegetables'],
-        'sweet & sour chicken': ['rice', 'chinese', 'chicken'],
-        'kung pao chicken': ['rice', 'chinese', 'chicken', 'peanuts'],
-        'koshari': ['rice', 'egyptian', 'pasta', 'lentils', 'onions', 'tomato', 'chickpeas'],
-        'maqluba': ['rice', 'middle east', 'chicken', 'beef', 'cauliflower', 'tomato', 'eggplant', 'potato'],
-        'chaufa': ['rice', 'peruvian', 'chicken', 'soy sauce', 'oyster sauce', 'sesame oil'],
-        'bulgogi': ['rice', 'korean', 'beef'],
-        'bibimbap': ['rice', 'korean'],
-        'sushi': ['rice', 'japanese', 'fish'],
-        'stuffed peppers': ['rice', 'american', 'beef', 'peppers'],
-        'thai basil chicken': ['rice', 'thai', 'chicken'],
-        'green bean chicken': ['rice', 'chinese', 'chicken', 'green beans'],
-        'teriyaki chicken': ['rice', 'japanese', 'chicken'],
-        'mongolian beef': ['rice', 'chinese', 'beef'],
-        'fried rice': ['rice'],
-        'pad thai': ['noodles', 'thai'],
-        'gochujang': ['noodles', 'korean', 'chicken', 'onion', 'bell pepper'],
-        'spaghetti marinara': ['pasta', 'italian'],
-        'spaghetti & meatballs': ['pasta', 'italian', 'beef'],
-        'spaghetti & meat sauce': ['pasta', 'italian', 'beef'],
-        'red casserole/goulash': ['pasta', 'italian', 'beef'],
-        'mac & cheese': ['pasta', 'american'],
-        'beef stroganoff': ['pasta', 'russian', 'beef'],
-        'chow mein': ['noodles', 'chinese'],
-        'singapore noodles': ['noodles', 'singaporean'],
-        'spaghetti carbonara': ['pasta', 'italian'],
-        'lemon chicken pasta': ['pasta', 'chicken'],
-        'pesto': ['pasta', 'italian'],
-        'eggplant/chicken parmesan': ['pasta', 'italian', 'eggplant', 'chicken'],
-        'reuben': ['sandwich', 'american'],
-        'french dip': ['sandwich', 'american'],
-        'monte cristo': ['sandwich', 'american'],
-        'tom-boys': ['sandwich', 'american'],
-        'toasted cheese': ['sandwich', 'american'],
-        'toasted tuna': ['sandwich', 'american', 'tuna'],
-        'sloppy joes': ['sandwich'],
-        'minestrone': ['soup', 'italian'],
-        'lemony greek soup': ['soup', 'greek'],
-        'french onion': ['soup', 'french'],
-        'chicken & dumplings': ['soup', 'chicken'],
-        'shakshouka': ['eggs', 'tomato'],
-        'beef stew': ['beef'],
-        'ghormeh sabzi': ['stew', 'iranian', 'beef', 'rice'],
-        'corn chowder': ['soup'],
-        'chicken noodle': ['soup', 'chicken'],
-        'tomato soup': ['soup'],
-        'quesadillas': ['tortilla', 'mexican'],
-        'falafel': ['bread'],
-        'korean dumplings in a tortilla': ['korean'],
-        'thai dumplings in a tortilla': ['other', 'thai', 'cabbage', 'easy'],
-        'pizza': ['bread', 'italian'],
-        'chicken pot pie': ['chicken'],
-        'shepherd\'s pie': ['beef'],
-        'pastel de choclo': ['other', 'chilean', 'chicken', 'beef', 'corn'],
-        'chicken & pan sauce': ['chicken'],
-        'corned beef': ['soup', 'irish', 'beef', 'cabbage', 'carrots', 'potatoes'],
-        'ethiopian cabbage': ['cabbage'],
-        'hot dogs & beans': ['bread', 'american', 'easy'],
-        'french fries/roasted veggies': ['other', 'american', 'easy'],
-        'frozen asian chicken things': ['rice', 'asian', 'easy'],
-      },
-      chosenDinner: '',
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    const entries = Object.entries(this.state.dinners);
+  useEffect(() => {
+    const entries = Object.entries(dinners);
     const randomIndex = Math.floor(Math.random() * entries.length);
-    console.log(entries[randomIndex][0], randomIndex);
-    this.setState({ chosenDinner: entries[randomIndex][0] });
-  }
+    const randomDinner = entries[randomIndex][0];
+    setChosenDinner(randomDinner);
+  }, [dinners]);
 
-  render() {
-    const { dinners, chosenDinner } = this.state;
-    const dinnerInfo = dinners[chosenDinner] || [];
+  const handleClick = () => {
+    const dinnerKeys = Object.keys(dinners);
+    const randomIndex = Math.floor(Math.random() * dinnerKeys.length);
+    const randomDinner = dinnerKeys[randomIndex];
+    setChosenDinner(randomDinner);
+  };
 
-    return (
-      <div>
-        <button onClick={this.handleClick}>Select random item</button>
-        <h1>Your Dinner: {chosenDinner}</h1>
-        <p><strong>Cuisine:</strong> {dinnerInfo[1]}</p>
-        <p><strong>Recipe type:</strong> {dinnerInfo[0]}</p>
-        <p><strong>Main Protein:</strong> {dinnerInfo[2]}</p>
-        <p><strong>Other Key Ingredients:</strong></p>
-        <ul>
-          {dinnerInfo.slice(3).map((ingredient, index) => (
-            <li key={index}>{ingredient}</li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
-}
+  const capitalize = (str) => {
+    if (typeof str === 'string') {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+    return ''; // Return an empty string or a default value for objects
+  };
 
-Picker.propTypes = {
-  // children: PropTypes.node.isRequired,
-  styles: PropTypes.shape({
-    root: PropTypes.object,
-    submenu: PropTypes.object,
-    menu: PropTypes.object,
-  }),
-  itemList: PropTypes.array,
-  title: PropTypes.string,
-};
+  const dinnerInfo = dinners[chosenDinner] || [];
+  const capitalizedDinner = capitalize(chosenDinner);
+  const capitalizedCuisine = capitalize(dinnerInfo[1]);
+  const capitalizedRecipeType = capitalize(dinnerInfo[0]);
+  const capitalizedMainProtein = capitalize(dinnerInfo[2]);
+  const capitalizedIngredients = dinnerInfo.slice(3).map((ingredient) => capitalize(ingredient));
 
-Picker.defaultProps = {
-  // styles: {},
-  itemList: [],
-  title: '',
+  return (
+    <div>
+      <button onClick={handleClick}>Select random item</button>
+      <h1>Your Dinner: {capitalizedDinner}</h1>
+      <p>
+        <strong>Cuisine:</strong> {capitalizedCuisine}
+      </p>
+      <p>
+        <strong>Recipe type:</strong> {capitalizedRecipeType}
+      </p>
+      <p>
+        <strong>Main Protein:</strong> {capitalizedMainProtein}
+      </p>
+      <p>
+        <strong>Other Key Ingredients:</strong>
+      </p>
+      <ul>
+        {capitalizedIngredients.map((ingredient, index) => (
+          <li key={index}>{ingredient}</li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default Picker;
