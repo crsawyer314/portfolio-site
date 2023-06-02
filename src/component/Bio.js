@@ -58,17 +58,19 @@ const Bio = ({ collapsed }) => {
 
             <h2>ThriveDX (Formerly HackerU)</h2>
             <p>As the Associate Program Director (Program Director of Curriculum) at <a href="https://thrivedx.com/">ThriveDX</a>, I oversaw a team of 8 Curriculum Developers in designing and building a 10-month program covering full-stack softare development, covering technologies including HTML, CSS, JavaScript, React and Redux, SQL, MongoDB, RESTful apps, Python, and basic cloud computing and DevOps.</p>
-            <p>I frequently worked with Instructional Design and Graphical design teams, helped to interface with our large team of part-time instructors, conducted interviews for both instructors and curricuklum developers, helped to maintain our course catalog, and co-led presentations to external clients.</p>
+            <p>In addition to overseeing curriculum development, I collaborated closely with Instructional Design and Graphic Design teams, facilitated communication with part-time instructors, conducted interviews for instructors and curriculum developers, and played a vital role in maintaining the course catalog. With a focus on Agile methodologies, I ensured the quality and up-to-date content of our Software Development bootcamp through continuous integration and deployment processes.</p>
 
             <hr className="major" />
 
             <h2>Aerial Data Labs</h2>
-            <p><a href="https://www.aerial-data-labs.com/">Aerial Data Labs</a>, a subsidiary of <a href="https://wrsweb.com/">Western Refinery Services</a>, focuses on intuitive drone & data services. As a Senior Full Stack Engineer, I spearhead many initiatives and work with members of my team to make our engineering vision a reality.</p>
+            <p><a href="https://www.aerial-data-labs.com/">Aerial Data Labs</a>, a subsidiary of <a href="https://wrsweb.com/">Western Refinery Services</a>, focuses on intuitive drone & data services.</p>
+            <p>As a Senior Full Stack Engineer at Aerial Data Labs, I play a pivotal role in spearheading initiatives and working collaboratively with team members to bring our engineering vision to fruition. Leveraging my expertise in AWS services such as SQS, ECS, and RDS, I conceptualize and execute innovative ideas to drive the company's vision and goals.</p>
+            <p>I am responsible for enhancing API capabilities and introducing microservices for automatic geo-tiff tiling. Utilizing technologies such as Django, React.js, Node.js, and Docker, I develop robust and scalable applications. Mentoring junior engineers is an essential aspect of my role, nurturing their growth and development. Additionally, I actively contribute to the candidate interview process, ensuring the hiring of top talent. Collaborating with all team members from the CTO to the engineers and drone pilots, I participate in planning and prioritizing roadmap initiatives, while utilizing Kanban boards to coordinate and manage work efficiently.</p>
 
             <hr className="major" />
 
             <h2>Other Current Work</h2>
-            <p>In addition to my full-time job, I am currently obtaining my Masters of Science degree in Computer Science from Georgia Institute of Technology, serving as a <a href="https://www.cityofbanks.org/index.asp?SEC={0DF3E9D5-4694-4A9E-932A-D78B0605C805}">City Councilor for the City of Banks</a> in Banks, Oregon (term starts Jan 2023), and expanding the course offerings on this website. I am also pursuing my hobbies of quilting, pyrography (wood burning), and others (see more on my hobbies page).</p>
+            <p>In addition to my full-time job, I am currently obtaining my Masters of Science degree in Computer Science from Georgia Institute of Technology, serving as a <a href="https://www.cityofbanks.org/index.asp?SEC={0DF3E9D5-4694-4A9E-932A-D78B0605C805}">City Councilor for the City of Banks</a> in Banks, Oregon (term started January 2023), and expanding the course offerings on this website. I am also pursuing my hobbies of quilting, pyrography (wood burning), and others (see more on my hobbies page).</p>
             <p>Publications:</p>
             <ul>
               <li><a href="http://hdl.handle.net/1853/69986">JavaScript for the Adult Novice</a></li>
