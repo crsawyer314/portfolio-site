@@ -29,10 +29,10 @@ const Bio = ({ collapsed }) => {
                 <p>I am passionate about increasing diversity through code.</p>
                 <p>I am a highly accomplished and versatile professional with expertise in technical education, software development, and curriculum design. Throughout my career, I have demonstrated a strong commitment to promoting diversity in the tech industry and have made significant contributions in various roles. I excel in curriculum development, instruction, and leadership positions, where I effectively oversee teams, secure grants, and drive impactful initiatives. My technical proficiency spans a wide range of technologies, including Python, Java, React, Django, and AWS. I am known for my exceptional leadership skills, instructional expertise, and dedication to fostering inclusive learning environments. With a deep passion for diversity, education, and technological innovation, I strive to make a lasting impact in the tech industry.</p>
               
-                <p>Languages:</p>
+                {/* <p>Languages:</p>
                 <LanguageIcons />
                 <br/>
-                <p>You can download a copy of my resume <a href="../assets/Catherine_Resume.pdf" download="Catherine_Resume.pdf">here</a>.</p>
+                <p>You can download a copy of my resume <a href="../assets/Catherine_Resume.pdf" download="Catherine_Resume.pdf">here</a>.</p> */}
               </section>
             <hr className="major" />
             
