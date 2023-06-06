@@ -1,5 +1,5 @@
 import React from "react";
-import LanguageIcons from './LanguageIcons';
+// import LanguageIcons from './LanguageIcons';
 
 
 const Bio = ({ collapsed }) => {
