@@ -21,7 +21,7 @@ const Resumes = ({ collapsed }) => {
               <h1>Resumes and Interviewing</h1>
             </header>
             <p>
-                In today's competitive job market, it is crucial to leverage professional networking platforms and well-crafted resumes to enhance your chances of finding the right job. <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a> and traditional resumes play complementary roles in showcasing your skills, experience, and qualifications to potential employers. This page will walk you through some of the key elements you can use to help improve your visibility to recruiters and land a job.
+                In today's competitive job market, it is crucial to leverage professional networking platforms and well-crafted resumes to enhance your chances of finding the right job. <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a> and traditional resumes play complementary roles in showcasing your skills, experience, and qualifications to potential employers. This page will walk you through some of the key elements you can use to help improve your visibility to recruiters and land a job.
             </p>
 
             <h3>The Importance of LinkedIn:</h3>

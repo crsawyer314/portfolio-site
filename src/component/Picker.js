@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import dinnersData from '../assets/dinners.json';
 
 const Picker = (props) => {
-  const [dinners, setDinners] = useState(dinnersData);
+  const [dinners] = useState(dinnersData);
   const [chosenDinner, setChosenDinner] = useState('');
 
   useEffect(() => {

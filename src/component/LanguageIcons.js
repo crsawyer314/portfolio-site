@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPython, FaNodeJs, FaReact, FaAws, FaHtml5, FaCss3Alt, FaJava, FaServer, FaJs } from "react-icons/fa";
+import { FaPython, FaNodeJs, FaReact, FaAws, FaHtml5, FaCss3Alt, FaJava, FaJs } from "react-icons/fa";
 import { SiDjango, SiNumpy, SiPandas, SiScipy, SiTensorflow, SiFlask, SiPostgresql, SiMysql, SiSqlite, SiMongodb } from "react-icons/si";
 
 const LanguageIcons = () => {
