@@ -63,7 +63,7 @@ const Bio = ({ collapsed }) => {
             <hr className="major" />
 
             <h2>Aerial Data Labs</h2>
-            <p><a href="https://www.aerial-data-labs.com/">Aerial Data Labs</a>, a subsidiary of <a href="https://wrsweb.com/">Western Refinery Services</a>, focuses on intuitive drone & data services.</p>
+            <p><a href="https://www.aerialdatalabs.com/">Aerial Data Labs</a>, a subsidiary of <a href="https://wrsweb.com/">Western Refinery Services</a>, focuses on intuitive drone & data services.</p>
             <p>As a Senior Full Stack Engineer at Aerial Data Labs, I play a pivotal role in spearheading initiatives and working collaboratively with team members to bring our engineering vision to fruition. Leveraging my expertise in AWS services such as SQS, ECS, and RDS, I conceptualize and execute innovative ideas to drive the company's vision and goals.</p>
             <p>I am responsible for enhancing API capabilities and introducing microservices for automatic geo-tiff tiling. Utilizing technologies such as Django, React.js, Node.js, and Docker, I develop robust and scalable applications. Mentoring junior engineers is an essential aspect of my role, nurturing their growth and development. Additionally, I actively contribute to the candidate interview process, ensuring the hiring of top talent. Collaborating with all team members from the CTO to the engineers and drone pilots, I participate in planning and prioritizing roadmap initiatives, while utilizing Kanban boards to coordinate and manage work efficiently.</p>
 
