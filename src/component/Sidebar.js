@@ -127,8 +127,9 @@ const Sidebar = ({ collapsed, toggleSidebar }) => {
             <li>
               <div className="sidebar-item-button" onClick={handlePocketDrawerToggle}>
                 <span className="sidebar-item-title">
-                  <Typography>JavaScript for Beginners</Typography>
+                  <Typography>JavaScript for Beginners
                   <ExpandMoreIcon className="expand-icon" style={{ transform: isPocketDrawerOpen ? 'rotate(180deg)' : 'rotate(0)' }} />
+                  </Typography>
                 </span>
               </div>
               {isPocketDrawerOpen && (
