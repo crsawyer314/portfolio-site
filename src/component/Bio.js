@@ -64,8 +64,18 @@ const Bio = ({ collapsed }) => {
 
             <h2>Aerial Data Labs</h2>
             <p><a href="https://www.aerialdatalabs.com/">Aerial Data Labs</a>, a subsidiary of <a href="https://wrsweb.com/">Western Refinery Services</a>, focuses on intuitive drone & data services.</p>
-            <p>As a Senior Full Stack Engineer at Aerial Data Labs, I play a pivotal role in spearheading initiatives and working collaboratively with team members to bring our engineering vision to fruition. Leveraging my expertise in AWS services such as SQS, ECS, and RDS, I conceptualize and execute innovative ideas to drive the company's vision and goals.</p>
-            <p>I am responsible for enhancing API capabilities and introducing microservices for automatic geo-tiff tiling. Utilizing technologies such as Django, React.js, Node.js, and Docker, I develop robust and scalable applications. Mentoring junior engineers is an essential aspect of my role, nurturing their growth and development. Additionally, I actively contribute to the candidate interview process, ensuring the hiring of top talent. Collaborating with all team members from the CTO to the engineers and drone pilots, I participate in planning and prioritizing roadmap initiatives, while utilizing Kanban boards to coordinate and manage work efficiently.</p>
+            <p>As a Senior Software Engineer and founding member of Aerial Data Labs, I played a pivotal role in shaping the direction and roadmap of the application. I collaborated with the Chief Product Officer to prioritize new features based on their impact and ease of implementation. One notable achievement was enhancing the usability and security of the API, resulting in a seamless deployment process and improved user experience. Additionally, I developed critical features, including creating a new microservice on AWS to optimize tiling geoTiff files, significantly reducing processing time and eliminating downtime and errors. I also led the transition from Wix to a self-hosted landing page, improving customer optics and streamlining operations. As a senior team member, I provided mentorship, supported the onboarding process, fostered a collaborative environment, and created comprehensive code documentation to enhance the team's effectiveness.</p>
+            <p><strong>Experience:</strong></p>
+            <ul>
+              <li>Collaborated with the Chief Product Officer to refine the product backlog and prioritize new features based on impact and implementation feasibility.</li>
+              <li>Enhanced the usability and security of the API by removing outdated code, implementing user permission checks, and updating the database structure, resulting in a smooth deployment process and improved user experience.</li>
+              <li>Developed critical features, including a new microservice for tiling geoTiff files, optimizing processing time by 2-3x and eliminating downtime and errors. Leveraged AWS SQS for queueing and improved the service's stability and performance.</li>
+              <li>Led the transition from Wix to a self-hosted landing page, creating a visually identical and responsive design. Consolidated domains and reduced operational costs, improving customer experience.</li>
+              <li>Created comprehensive code documentation (following Google-style guidelines) for the entire ADL codebase, enabling the team to work more effectively by understanding the codebase thoroughly.</li>
+              <li>Contributed to the interview process by assisting in the creation of job descriptions, participating in interviews, and reviewing technical coding exercises.</li>
+              <li>Mentored and supported junior engineers, providing guidance on task selection, effective communication, work-life balance, and career growth.</li>
+              <li>Developed comprehensive onboarding documentation, refining it over time based on feedback and personal experimentation. Encouraged collaboration in updating and maintaining documentation for future reference.</li>
+            </ul>
 
             <hr className="major" />
 

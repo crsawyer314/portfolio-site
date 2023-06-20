@@ -135,9 +135,9 @@ const Sidebar = ({ collapsed, toggleSidebar }) => {
               {isPocketDrawerOpen && (
                 <div className="submenu">
                   <ul>
-                    <li><Typography><a href="/js_about">About</a></Typography></li>
-                    <li><Typography><a href="/js_syllabus">Syllabus</a></Typography></li>
-                    <li><Typography><a href="/resumes">Resumes and Interviewing</a></Typography></li>
+                    <li><Typography><a href="/#/js_about">About</a></Typography></li>
+                    <li><Typography><a href="/#/js_syllabus">Syllabus</a></Typography></li>
+                    <li><Typography><a href="/#/resumes">Resumes and Interviewing</a></Typography></li>
                     <li>
                       <div onClick={handlePocketDrawerToggle1}>
                         <span className="sidebar-item-title">
@@ -159,69 +159,6 @@ const Sidebar = ({ collapsed, toggleSidebar }) => {
                         </div>
                       )}
                     </li>
-                    {/* <li>
-                      <div onClick={handlePocketDrawerToggle2}>
-                        <span className="sidebar-item-title">
-                        <Typography>{mod2Title}
-                          <ExpandMoreIcon className="expand-icon" style={{ transform: isPocketDrawerOpen2 ? 'rotate(180deg)' : 'rotate(0)' }} />
-                        </Typography>
-                        </span>
-                        
-                      </div>
-                      {isPocketDrawerOpen2 && (
-                        <div className="submenu">
-                          <ul>
-                            {mod2List.map((item, index) => (
-                              <li key={index}>
-                                <Typography><a href={item.link}>{item.title}</a></Typography>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </li> */}
-                    {/* <li>
-                      <div onClick={handlePocketDrawerToggle3}>
-                        <span className="sidebar-item-title">
-                        <Typography>{mod3Title}
-                          <ExpandMoreIcon className="expand-icon" style={{ transform: isPocketDrawerOpen3 ? 'rotate(180deg)' : 'rotate(0)' }} />
-                        </Typography>
-                        </span>
-                        
-                      </div>
-                      {isPocketDrawerOpen3 && (
-                        <div className="submenu">
-                          <ul>
-                            {mod3List.map((item, index) => (
-                              <li key={index}>
-                                <Typography><a href={item.link}>{item.title}</a></Typography>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </li> */}
-                    {/* <li>
-                      <div onClick={handlePocketDrawerToggle4}>
-                        <span className="sidebar-item-title">
-                        <Typography>{mod4Title}
-                          <ExpandMoreIcon className="expand-icon" style={{ transform: isPocketDrawerOpen4 ? 'rotate(180deg)' : 'rotate(0)' }} />
-                        </Typography>
-                        </span>
-                        
-                      </div>
-                      {isPocketDrawerOpen4 && (
-                        <div className="submenu">
-                          <ul>
-                            {mod4List.map((item, index) => (
-                              <li key={index}>
-                                <Typography><a href={item.link}>{item.title}</a></Typography>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </li> */}
                   </ul>
                 </div>
               )}
