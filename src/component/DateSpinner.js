@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback  } from 'react';
 import { Card, CardContent, Grid, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import dateIdeasData from '../assets/dateIdeas.json';
@@ -32,17 +32,6 @@ const DateIdeaSpinner = ({ collapsed }) => {
   const [filteredDateIdeas, setFilteredDateIdeas] = useState([]);
   const [showAllMatching, setShowAllMatching] = useState(false);
   const [expandedCards, setExpandedCards] = useState([]);
-  const [selectedDateIdeaDetails, setSelectedDateIdeaDetails] = useState('');
-
-  useEffect(() => {
-    const dateIdeaKeys = Object.keys(dateIdeas);
-    const filteredDateIdeaKeys = filterDateIdeasByCostAndLocation(dateIdeaKeys);
-    setFilteredDateIdeas(filteredDateIdeaKeys);
-
-    const randomIndex = Math.floor(Math.random() * filteredDateIdeaKeys.length);
-    const randomDateIdea = filteredDateIdeaKeys[randomIndex];
-    setChosenDateIdea(randomDateIdea);
-  }, [dateIdeas, selectedCostFilters, selectedLocationFilters]);
 
   const handleClick = () => {
     setShowAllMatching(false);
@@ -53,7 +42,6 @@ const DateIdeaSpinner = ({ collapsed }) => {
     const randomIndex = Math.floor(Math.random() * filteredDateIdeaKeys.length);
     const randomDateIdea = filteredDateIdeaKeys[randomIndex];
     setChosenDateIdea(randomDateIdea);
-    // setExpandedCards(null); // Reset expanded card
   };
 
   const handleShowAllMatching = () => {
@@ -67,7 +55,7 @@ const DateIdeaSpinner = ({ collapsed }) => {
     return ''; // Return an empty string or a default value for objects
   };
 
-  const filterDateIdeasByCostAndLocation = (dateIdeaKeys) => {
+  const filterDateIdeasByCostAndLocation = useCallback((dateIdeaKeys) => {
     if (
       (selectedCostFilters.length === 0 || selectedCostFilters.length === 3) &&
       (selectedLocationFilters.length === 0 || selectedLocationFilters.length === 2)
@@ -80,7 +68,18 @@ const DateIdeaSpinner = ({ collapsed }) => {
           (selectedLocationFilters.length === 0 || selectedLocationFilters.includes(dateIdeas[key][0]))
       );
     }
-  };
+  }, [dateIdeas, selectedCostFilters, selectedLocationFilters]);
+  
+  useEffect(() => {
+    const dateIdeaKeys = Object.keys(dateIdeas);
+    const filteredDateIdeaKeys = filterDateIdeasByCostAndLocation(dateIdeaKeys);
+    setFilteredDateIdeas(filteredDateIdeaKeys);
+  
+    const randomIndex = Math.floor(Math.random() * filteredDateIdeaKeys.length);
+    const randomDateIdea = filteredDateIdeaKeys[randomIndex];
+    setChosenDateIdea(randomDateIdea);
+  }, [dateIdeas, filterDateIdeasByCostAndLocation]);
+  
 
   const handleCostFilterClick = (cost) => {
     let updatedCostFilters = [...selectedCostFilters];
