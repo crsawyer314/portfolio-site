@@ -1823,7 +1823,7 @@ button.active:hover,
     position: fixed;
     top: 20px; /* Adjust the desired top position */
     left: 20px; /* Adjust the desired left position */
-    z-index: 9999; /* Ensure the button stays on top of other elements */
+    z-index: 999999; /* Ensure the button stays on top of other elements */
     }
 
 .square {

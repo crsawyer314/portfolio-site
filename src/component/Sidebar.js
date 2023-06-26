@@ -49,7 +49,7 @@ const mod1List = [
 
 const Sidebar = ({ collapsed }) => {
 
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(collapsed);
   const [isPocketDrawerOpen, setIsPocketDrawerOpen] = useState(false);
   const [isPocketDrawerOpen1, setIsPocketDrawerOpen1] = useState(false);
   // const [isPocketDrawerOpen2, setIsPocketDrawerOpen2] = useState(false);
@@ -76,27 +76,27 @@ const Sidebar = ({ collapsed }) => {
   //   setIsPocketDrawerOpen4(!isPocketDrawerOpen4);
   // };
 
-  useEffect(() => {
-    const getWindowWidth = () => {
-      return Math.max(
-        document.documentElement.clientWidth,
-        window.innerWidth || 0
-      );
-    };
+  // useEffect(() => {
+  //   const getWindowWidth = () => {
+  //     return Math.max(
+  //       document.documentElement.clientWidth,
+  //       window.innerWidth || 0
+  //     );
+  //   };
 
-    const handleWindowResize = () => {
-      const width = getWindowWidth();
-      setSidebarCollapsed(width < 736);
-    };
+  //   const handleWindowResize = () => {
+  //     const width = getWindowWidth();
+  //     setSidebarCollapsed(width <= 736);
+  //   };
 
-    handleWindowResize(); // Set initial sidebar state
+  //   handleWindowResize(); // Set initial sidebar state
 
-    window.addEventListener('resize', handleWindowResize);
+  //   window.addEventListener('resize', handleWindowResize);
 
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('resize', handleWindowResize);
+  //   };
+  // }, []);
 
   useEffect(() => {
     setSidebarCollapsed(collapsed);
@@ -106,7 +106,7 @@ const Sidebar = ({ collapsed }) => {
     <div id="sidebar" className={sidebarCollapsed ? 'collapsed' : 'expanded'}>
       <div className="inner">
         <nav id="menu">
-          {collapsed && <div className="expand-icon">X</div>}
+          {/* {collapsed && <div className="expand-icon">X</div>} */}
           <br /><br /><br />
           <header className="major">
             <Typography>Menu</Typography>

@@ -54,7 +54,7 @@ const App = () => {
       <Sidebar collapsed={sidebarCollapsed} />
 
       {/* Expand/Collapse button */}
-      <button className="toggle-button square" onClick={toggleSidebar} style={{ position: 'fixed', top: '10px', left: '10px', zIndex: '9999' }}>
+      <button className="toggle-button square" onClick={toggleSidebar}>
         {sidebarCollapsed ? <ChevronRight /> : <ChevronLeft />}
       </button>
       <Router>
