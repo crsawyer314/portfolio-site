@@ -231,6 +231,7 @@ const DateIdeaSpinner = ({ collapsed }) => {
                               Cost: {cost}
                             </Typography>
                           </CardContent>
+                          {details && ( // Check if details exists
                           <CardActions disableSpacing={true}>
                             <ExpandMore
                               expand={isExpanded}
@@ -241,6 +242,7 @@ const DateIdeaSpinner = ({ collapsed }) => {
                               <ExpandMoreIcon />
                             </ExpandMore>
                           </CardActions>
+                          )}
                           <Collapse in={isExpanded} unmountOnExit>
                             <CardContent>
                               <Typography paragraph>{details}</Typography>
@@ -264,6 +266,7 @@ const DateIdeaSpinner = ({ collapsed }) => {
                       Cost: {cost}
                     </Typography>
                   </CardContent>
+                  {details && ( // Check if details exists
                   <CardActions disableSpacing={true}>
                     <ExpandMore
                       expand={expandedCards.includes(chosenDateIdea)}
@@ -274,6 +277,7 @@ const DateIdeaSpinner = ({ collapsed }) => {
                       <ExpandMoreIcon />
                     </ExpandMore>
                   </CardActions>
+                  )}
                   <Collapse in={expandedCards.includes(chosenDateIdea)} unmountOnExit>
                     <CardContent>
                       <Typography paragraph>{details}</Typography>
