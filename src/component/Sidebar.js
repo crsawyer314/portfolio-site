@@ -173,6 +173,11 @@ const Sidebar = ({ collapsed, toggleSidebar }) => {
                 <a href="/#/dinner-spinner">Dinner Spinner</a>
               </Typography>
             </li>
+            <li>
+              <Typography>
+                <a href="/#/date-spinner">Date Idea Spinner</a>
+              </Typography>
+            </li>
           </ul>
         </nav>
   

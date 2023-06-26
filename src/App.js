@@ -9,6 +9,7 @@ import JsSyllabus from "./component/JsSyllabus";
 import Resumes from "./component/Resumes";
 import Hobbies from "./component/Hobbies";
 import DinnerSpinner from "./component/DinnerSpinner";
+import DateSpinner from "./component/DateSpinner";
 import Bio from "./component/Bio";
 import Js1 from "./component/Js1";
 import JsAssessment from "./component/JsAssessment";
@@ -204,6 +205,9 @@ function App() {
           <Route 
             path="/dinner-spinner" 
             element={<DinnerSpinner collapsed={sidebarCollapsed} /> } />
+          <Route 
+            path="/date-spinner" 
+            element={<DateSpinner collapsed={sidebarCollapsed} /> } />
           <Route 
             path="/js_about" 
             element={<JsAbout collapsed={sidebarCollapsed} /> } />
