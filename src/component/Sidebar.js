@@ -47,7 +47,7 @@ const mod1List = [
 //   {title: "Assessment 4", link: "/#/js_4_assessment"}
 // ];
 
-const Sidebar = ({ collapsed, toggleSidebar }) => {
+const Sidebar = ({ collapsed }) => {
 
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [isPocketDrawerOpen, setIsPocketDrawerOpen] = useState(false);
@@ -104,11 +104,9 @@ const Sidebar = ({ collapsed, toggleSidebar }) => {
 
   return (
     <div id="sidebar" className={sidebarCollapsed ? 'collapsed' : 'expanded'}>
-      {/* <button className="toggle" onClick={toggleSidebar}>
-        <span className="label">Toggle Sidebar</span>
-      </button> */}
       <div className="inner">
         <nav id="menu">
+          {collapsed && <div className="expand-icon">X</div>}
           <br /><br /><br />
           <header className="major">
             <Typography>Menu</Typography>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 
@@ -28,17 +28,33 @@ import Js1Assessment from "./assets/js1-assessment.md";
 import "./styles/main.css"
 
 
-function App() {
+const App = () => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
-    const toggleSidebar = () => {
-        setSidebarCollapsed(!sidebarCollapsed);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const isMobile = window.innerWidth < 768;
+      setSidebarCollapsed(isMobile);
     };
 
-    return (
-    <div className={`App`}>
-      <Sidebar collapsed={sidebarCollapsed} toggleSidebar={toggleSidebar} />
-      <button className="toggle-button square" onClick={toggleSidebar}>
-        {/* <span className="label">Toggle Sidebar</span> */}
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const toggleSidebar = () => {
+    setSidebarCollapsed(!sidebarCollapsed);
+  };
+
+  return (
+    <div className="App">
+      <Sidebar collapsed={sidebarCollapsed} />
+
+      {/* Expand/Collapse button */}
+      <button className="toggle-button square" onClick={toggleSidebar} style={{ position: 'fixed', top: '10px', left: '10px', zIndex: '9999' }}>
         {sidebarCollapsed ? <ChevronRight /> : <ChevronLeft />}
       </button>
       <Router>
