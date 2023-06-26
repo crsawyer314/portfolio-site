@@ -144,7 +144,8 @@ const DateIdeaSpinner = ({ collapsed }) => {
             </header>
 
             <div>
-              <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', alignItems: 'center', marginRight: '0.5em' }}>
                 <h3>Filter by Cost: </h3>
                 <button
                   title="$0-$10"
@@ -170,12 +171,14 @@ const DateIdeaSpinner = ({ collapsed }) => {
                 >
                   $$$
                 </button>
+              </div>
 
-                <h3 style={{ marginRight: '0.5em', marginLeft: '0.5em' }}>Filter by Location:</h3>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <h3 style={{ marginRight: '0.5em' }}>Filter by Location:</h3>
                 <button
                   className={selectedLocationFilters.includes('At home') ? 'active' : ''}
                   onClick={() => handleLocationFilterClick('At home')}
-                  style={{ marginRight: '0.5em', marginLeft: '0.5em' }}
+                  style={{ marginRight: '0.5em' }}
                 >
                   At Home
                 </button>
@@ -187,6 +190,7 @@ const DateIdeaSpinner = ({ collapsed }) => {
                   Out
                 </button>
               </div>
+            </div>
 
               <br />
               <button onClick={handleClick} className={!showAllMatching ? 'active' : ''}>
