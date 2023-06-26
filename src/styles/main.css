@@ -1424,7 +1424,7 @@ ul.pagination {
         background-color: #29ad2a;
         color: #ffffff !important; }
         ul.pagination li > .page.expanded:hover {
-          background-color: #f67878; }
+          background-color: #29ad2a; }
         ul.pagination li > .page.expanded:expanded {
           background-color: #f45c5c; }
     ul.pagination li:first-child {
@@ -1509,76 +1509,109 @@ button,
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  white-space: nowrap; }
-  input[type="submit"]:hover,
-  input[type="reset"]:hover,
-  input[type="button"]:hover,
-  button:hover,
-  .button:hover {
-    background-color: rgba(245, 106, 106, 0.05); }
-  input[type="submit"]:expanded,
-  input[type="reset"]:expanded,
-  input[type="button"]:expanded,
-  button:expanded,
-  .button:expanded {
-    background-color: rgba(245, 106, 106, 0.15); }
-  input[type="submit"].icon:before,
-  input[type="reset"].icon:before,
-  input[type="button"].icon:before,
-  button.icon:before,
-  .button.icon:before {
-    margin-right: 0.5em; }
-  input[type="submit"].fit,
-  input[type="reset"].fit,
-  input[type="button"].fit,
-  button.fit,
-  .button.fit {
-    width: 100%; }
-  input[type="submit"].small,
-  input[type="reset"].small,
-  input[type="button"].small,
-  button.small,
-  .button.small {
-    font-size: 0.6em; }
-  input[type="submit"].large,
-  input[type="reset"].large,
-  input[type="button"].large,
-  button.large,
-  .button.large {
-    font-size: 1em;
-    height: 3.65em;
-    line-height: 3.65em; }
-  input[type="submit"].primary,
-  input[type="reset"].primary,
-  input[type="button"].primary,
-  button.primary,
-  .button.primary {
-    background-color: #29ad2a;
-    box-shadow: none;
-    color: #ffffff !important; }
-    input[type="submit"].primary:hover,
-    input[type="reset"].primary:hover,
-    input[type="button"].primary:hover,
-    button.primary:hover,
-    .button.primary:hover {
-      background-color: #f67878; }
-    input[type="submit"].primary:expanded,
-    input[type="reset"].primary:expanded,
-    input[type="button"].primary:expanded,
-    button.primary:expanded,
-    .button.primary:expanded {
-      background-color: #f45c5c; }
-  input[type="submit"].disabled, input[type="submit"]:disabled,
-  input[type="reset"].disabled,
-  input[type="reset"]:disabled,
-  input[type="button"].disabled,
-  input[type="button"]:disabled,
-  button.disabled,
-  button:disabled,
-  .button.disabled,
-  .button:disabled {
-    pointer-events: none;
-    opacity: 0.25; }
+  white-space: nowrap;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+button:hover,
+.button:hover {
+  background-color: rgba(41, 173, 42, 0.15);
+}
+
+input[type="submit"]:expanded,
+input[type="reset"]:expanded,
+input[type="button"]:expanded,
+button:expanded,
+.button:expanded {
+  background-color: rgba(41, 173, 42, 0.25);
+}
+
+input[type="submit"].icon:before,
+input[type="reset"].icon:before,
+input[type="button"].icon:before,
+button.icon:before,
+.button.icon:before {
+  margin-right: 0.5em;
+}
+
+input[type="submit"].fit,
+input[type="reset"].fit,
+input[type="button"].fit,
+button.fit,
+.button.fit {
+  width: 100%;
+}
+
+input[type="submit"].small,
+input[type="reset"].small,
+input[type="button"].small,
+button.small,
+.button.small {
+  font-size: 0.6em;
+}
+
+input[type="submit"].large,
+input[type="reset"].large,
+input[type="button"].large,
+button.large,
+.button.large {
+  font-size: 1em;
+  height: 3.65em;
+  line-height: 3.65em;
+}
+
+input[type="submit"].primary,
+input[type="reset"].primary,
+input[type="button"].primary,
+button.primary,
+.button.primary {
+  background-color: #29ad2a;
+  box-shadow: none;
+  color: #ffffff !important;
+}
+
+input[type="submit"].primary:hover,
+input[type="reset"].primary:hover,
+input[type="button"].primary:hover,
+button.primary:hover,
+.button.primary:hover,
+input[type="submit"].primary:expanded,
+input[type="reset"].primary:expanded,
+input[type="button"].primary:expanded,
+button.primary:expanded,
+.button.primary:expanded {
+  background-color: #29ac0a;
+}
+
+input[type="submit"].disabled,
+input[type="submit"]:disabled,
+input[type="reset"].disabled,
+input[type="reset"]:disabled,
+input[type="button"].disabled,
+input[type="button"]:disabled,
+button.disabled,
+button:disabled,
+.button.disabled,
+.button:disabled {
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+button.active,
+.button.active {
+  background-color: #29ac0a;
+  color: white !important;
+}
+
+button.active:hover,
+.button.active:hover {
+  background-color: rgba(59, 158, 57, 0.65);
+  color: white !important;
+}
+
+    
 
 /* Mini Posts */
 .mini-posts article {
